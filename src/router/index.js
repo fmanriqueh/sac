@@ -2,19 +2,25 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Login from '@/views/Login.vue'
 import Dashboard from '@/views/Dashboard.vue'
+import ErrorNF from '@/views/error/Error.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: 'Login',
     component: Login
   },
   {
     path: '/dashboard',
     name: 'Dashboard',
     component: Dashboard
+  },
+  {
+    path: '*',
+    name: 'ERROR - 404',
+    component: ErrorNF
   }
 ]
 
